@@ -5,10 +5,11 @@ This folder contains a  small selection of scripts supporting the computational 
 Included scripts:
 
 1. `01_orthodb_mapping.py` — maps the reviewed human SMG5/SMG6/SMG7 references to Eukaryota-level OrthoDB v12 orthogroups.
-2. `02_parnas_sampling.py` — evaluates PARNAS diversity for k = 2–35 and selects the final 25 representatives (5 fixed + 20 selected).
-3. `03_build_PIN32_dataset.py` — constructs the 32-sequence PIN-domain dataset from the PARNAS subset plus NMD4 and SWT1.
-4. `04_phylogenetic_workflows.sh` — records the final MAFFT, ClipKIT and IQ-TREE 3 commands for the 90-protein full-length and 32-protein PIN-domain analyses; the exploratory 14-3-3-like analysis is included as an optional final block because it is reported briefly in Results.
-5. `05_map_functional_residues.py` — maps the experimentally characterised SMG5/SMG6 residues onto an alignment and records exact residue conservation.
+2. `02_ncbi_taxonomy_mapping.py` — maps organism names and/or source-database TaxIDs to NCBI Taxonomy and retrieves standard taxonomic ranks and full lineages using Entrez ESearch/EFetch. This is the programmatic taxonomy step described in Methods 3.2.3.
+3. `03_parnas_sampling.py` — evaluates PARNAS diversity for k = 2–35 and selects the final 25 representatives (5 predefined + 20 selected).
+4. `04_build_PIN32_dataset.py` — constructs the 32-sequence PIN-domain dataset from the representative subset plus NMD4 and SWT1.
+5. `05_phylogenetic_workflows.sh` — records the final MAFFT, ClipKIT and IQ-TREE 3 commands for the 90-protein full-length and 32-protein PIN-domain analyses. The exploratory 14-3-3-like commands are retained only as a commented block because that analysis is reported briefly in Results.
+6. `06_map_functional_residues.py` — maps the experimentally characterised SMG5/SMG6 residues onto an alignment and records exact residue conservation.
 
 Manual/database steps described in the dissertation (PANTHER inspection, NCBI BLAST/PSI-BLAST, EukProt searches, InterPro web screening, Domain Architecture Search and Jalview inspection) are not represented here. Plotting-only code and superseded exploratory analyses are also omitted.
 
